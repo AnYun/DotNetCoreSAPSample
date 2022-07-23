@@ -7,25 +7,20 @@ using System.Threading.Tasks;
 
 namespace DotNetCoreSAPSample.Model
 {
+/// <summary>
+/// Echo Demo Output
+/// </summary>
+internal class EchoDemoOutput
+{
     /// <summary>
-    /// Echo Demo Output
+    /// Response Text
     /// </summary>
-    internal class EchoDemoOutput
-    {
-        /// <summary>
-        /// Echo Struct
-        /// </summary>
-        [SapName("ECHOSTRUCT")]
-        public EchoDemoItem EchoStruct { get; set; }
-        /// <summary>
-        /// Response Text
-        /// </summary>
-        [SapName("RESPTEXT")]
-        public string ResponseText { get; set; }
-        /// <summary>
-        /// RFCTable
-        /// </summary>
-        [SapName("RFCTABLE")]
-        public EchoDemoItem[] RFCTable { get; set; }
-    }
+    [SapName("RESPTEXT")]
+    public string ResponseText { get; set; }
+    /// <summary>
+    /// RFCTable
+    /// </summary>
+    [SapName("RFCTABLE")]
+    public EchoDemoItem[] RFCTable { get; set; }
+}
 }
